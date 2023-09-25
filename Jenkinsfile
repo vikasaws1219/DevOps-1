@@ -9,7 +9,7 @@ pipeline{
             steps{
 
                 script{
-                    git branch: 'main', url: 'https://github.com/vikasaws1219/devops_java_app.git'
+                    git branch: 'main', url: 'https://github.com/vikasaws1219/DevOps-1.git'
 
                 }
             }
