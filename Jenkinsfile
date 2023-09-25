@@ -11,8 +11,8 @@ pipeline{
 
                 script{
                     gitCheckout(
-                        branch: 'main'
-                        url: 'https://github.com/vikasaws1219/DevOps-1.git'
+                        branch: "main",
+                        url: "https://github.com/vikasaws1219/DevOps-1.git"
 
                     )
                     
