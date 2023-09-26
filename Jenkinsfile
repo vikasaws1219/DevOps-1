@@ -25,6 +25,18 @@ pipeline{
                 }
             }
         }
+        stage('Mvn Clean Pckage'){
+
+            when { expression { params.action == 'create' } }
+
+            steps{
+
+                script{
+                    mvnCleanPackage()                    
+                }
+            }
+        }
+        
         stage('Unit Test Maven'){
 
             when { expression { params.action == 'create' } }
