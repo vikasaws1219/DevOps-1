@@ -25,7 +25,7 @@ pipeline{
                 }
             }
         }
-        stage('Mvn Clean Pckage'){
+        stage('Mvn Clean Package'){
 
             when { expression { params.action == 'create' } }
 
@@ -87,6 +87,19 @@ pipeline{
                     
                     def SonarQubecredentialsId = 'sonar-api'
                     QualityGateStatus(SonarQubecredentialsId)
+
+                }
+            }
+        }
+        stage('Mvn Clean Install'){
+
+            when { expression { params.action == 'create' } }
+
+            steps{
+
+                script{
+                    
+                    mvnBuild()
 
                 }
             }
